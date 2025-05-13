@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import {
@@ -98,22 +97,20 @@ const Index = () => {
           isValid: true,
         });
         setApiKeyDialogOpen(false);
-        toast({
+        toast.success({
           title: "API Key Saved",
           description: "Your OpenAI API key has been saved successfully.",
         });
       } else {
-        toast({
+        toast.error({
           title: "Invalid API Key",
           description: "Please enter a valid OpenAI API key.",
-          variant: "destructive",
         });
       }
     } catch (error) {
-      toast({
+      toast.error({
         title: "Error",
         description: "Failed to validate API key. Please try again.",
-        variant: "destructive",
       });
     }
   };
