@@ -18,16 +18,10 @@ const GeneratedText: React.FC<GeneratedTextProps> = ({ response, isLoading }) =>
     
     navigator.clipboard.writeText(response.response)
       .then(() => {
-        toast.success({
-          title: "Copied to clipboard",
-          description: "The generated text has been copied to your clipboard.",
-        });
+        toast.success("The generated text has been copied to your clipboard.");
       })
       .catch(() => {
-        toast.error({
-          title: "Copy failed",
-          description: "Could not copy to clipboard. Please try again.",
-        });
+        toast.error("Could not copy to clipboard. Please try again.");
       });
   };
 

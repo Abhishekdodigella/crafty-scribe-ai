@@ -97,21 +97,12 @@ const Index = () => {
           isValid: true,
         });
         setApiKeyDialogOpen(false);
-        toast.success({
-          title: "API Key Saved",
-          description: "Your OpenAI API key has been saved successfully.",
-        });
+        toast.success("Your OpenAI API key has been saved successfully.");
       } else {
-        toast.error({
-          title: "Invalid API Key",
-          description: "Please enter a valid OpenAI API key.",
-        });
+        toast.error("Please enter a valid OpenAI API key.");
       }
     } catch (error) {
-      toast.error({
-        title: "Error",
-        description: "Failed to validate API key. Please try again.",
-      });
+      toast.error("Failed to validate API key. Please try again.");
     }
   };
 

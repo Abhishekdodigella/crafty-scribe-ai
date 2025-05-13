@@ -46,10 +46,7 @@ export const generateText = async (
     return data.choices[0].message.content;
   } catch (error) {
     console.error("Error generating text:", error);
-    toast.error({
-      title: "Error",
-      description: error instanceof Error ? error.message : "Failed to generate text",
-    });
+    toast.error(error instanceof Error ? error.message : "Failed to generate text");
     throw error;
   }
 };
