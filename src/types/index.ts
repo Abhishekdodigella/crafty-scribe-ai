@@ -18,3 +18,12 @@ export type ApiKeyState = {
   key: string;
   isValid: boolean;
 };
+
+export type Workout = {
+  id: string;
+  type: string;
+  duration: number;
+  date: Date;
+  notes: string;
+};
+
